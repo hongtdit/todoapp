@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<style>
+  * {
+        padding: 0;
+
+        margin: 0;
+      }
+      ::placeholder {
+        color: rgb(194, 158, 158);
+      }
+      #input {
+        height: 30px;
+        width: 300px;
+        border-radius: 5px;
+      }
+      #valueEdit {
+        height: 30px;
+        width: 300px;
+        border-radius: 5px;
+      }
+      #save {
+        height: 33px;
+        width: 70px;
+        border-radius: 5px;
+      }
+      .container {
+        text-align: center;
+      }
+      .table1 {
+        margin-top: 50px;
+        margin-left: 250px;
+      }
+      .edit1 {
+        background-color: orange;
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        
+      }
+      .delete {
+        background-color: rgb(226, 43, 147);
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+      }
+      .Finish {
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+      }
+      #save {
+        background-color: rgb(10, 52, 30);
+        color: white;
+      }
+      #searchInput {
+        width: 600px;
+        height: 30px;
+        border-radius: 5px;
+      }
+      #edittext{
+        margin-top: 10px;
+        height: 30px;
+        width: 300px;
+        border-radius: 5px;
+      }
+      #submit{
+        background-color: violet;
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        height: 33px;
+        width: 70px
+        
+      }
+</style>
+
+<body>
+  <div class="container">
+  <h2>To Do App</h2>
+  <div class="add-todo">
+  <input id="input" type="text" value="" placeholder="Enter a task here" />
+  <button id="save" onclick="save()">Save</button> </body></html>
+</br>
+</br>
+  <input
+          id="searchInput"
+          oninput="search()"
+          class="search-input"
+          type="text"
+          placeholder="search a task"
+        />
+        
+  <div id="edit"></div>
+  </div>
+  <div class="table1" style="margin-top: 20px">
+    <table  cellpadding="4" style="width: 70%" border="1px">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Todo item</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="result" cellpadding="4" style="width: 100%"></tbody>
+    </table>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+
+</html>

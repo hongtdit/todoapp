@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="footplayer">
+    <input type="button" value="Add" onclick="addFootplayer()">
+    <div >
+        <ul id="list"></ul>
+    </div>
+</body>
+<script>
+    var list = document.getElementById("list")
+    var footplayer = document.getElementById("footplayer");
+    function addFootplayer() {
+        var li = document.createElement("li");
+        var span = document.createElement("span")
+        var node = document.createTextNode(footplayer.value);
+        var input = document.createElement("input")
+        li.appendChild(node);
+        list.appendChild(li);
+        li.appendChild(input);
+        input.type = "button";
+        input.value = "X"
+        input.onclick = function deleteInfo() {
+            list.removeChild(li)
+        }
+        footplayer.value = ""
+    }
+</script>
+</html>
